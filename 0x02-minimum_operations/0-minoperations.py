@@ -4,7 +4,7 @@ Function for calculating number of operations
 """
 
 
-def minOperations2(n):
+def minOperations(n):
     a = 1
     q = 0
     if n == 1:
