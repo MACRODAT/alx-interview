@@ -12,7 +12,7 @@ def minOperations(n):
     while True:
         a += 1
         if n % a == 0:
-            return a + minOperations2(n // a)
+            return a + minOperations(n // a)
         if a == n-1:
             break
     return n
