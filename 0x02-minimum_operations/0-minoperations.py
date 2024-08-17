@@ -6,7 +6,7 @@ Function for calculating number of operations
 
 def minOperations(n):
     a = 1
-    if n == 1:
+    if n <= 1:
         return 0
     while True:
         a += 1
