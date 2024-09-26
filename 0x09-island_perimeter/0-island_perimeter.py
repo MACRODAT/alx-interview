@@ -8,11 +8,13 @@
 def inGrid(_w, _h, i, j):
     return (i >= 0 and j >= 0 and i < _w and j < _h)
 
+
 def neighboors(i, j, _w, _h):
     combinations = [(i - 1, j), (i + 1, j), (i, j + 1), (i, j - 1)]
     for x, y in combinations:
-            if inGrid(_w, _h, x, y):
-                yield (x, y)
+        if inGrid(_w, _h, x, y):
+            yield (x, y)
+
 
 def countWater(_w, _h, i, j, grid):
     per = 0
@@ -20,6 +22,8 @@ def countWater(_w, _h, i, j, grid):
         if grid[y][x] == 0:
             per += 1
     return per
+
+
 def island_perimeter(grid):
     # let's do 1
     # @param grid the grid
@@ -45,6 +49,7 @@ def island_perimeter(grid):
             if grid[j][i] == 1:
                 perimeter += countWater(_w, _h, i, j, grid)
     return perimeter
+
 
 if __name__ == "__main__":
     grid = [
